@@ -1,6 +1,7 @@
 <html>
 <head>
-<link rel='stylesheet' href='static/style.css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel='stylesheet' href= "{{ url_for('static', filename='style.css') }}">
 
 <!-- jquery for Arthur -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,18 +13,24 @@
 
 </script>
 
+<header> LINKECH </header>
 
-<div id="chat">
 
 
+<div class="container" id="chat">
+    <div class="element"> Important message </div>
+    <div class="element your_msg"> Next message </div>
+    
 </div>
 
-<aside id="users">
-
+<aside class="container" id="users">
+    
 </aside>
 
-<nav id="rooms">
-
+<nav class="switch" id="dash">
+    <button id="chat_btn"> chat </button>
+    <button id="room_btn"> room </button>
+    <button id="users_btn"> users </button>
 </nav>
 
 </body>
