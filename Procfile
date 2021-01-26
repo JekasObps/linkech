@@ -1,1 +1,1 @@
-web: gunicorn wsgi --log-file -
+web: gunicorn --worker-class eventlet wsgi.py --log-file -
