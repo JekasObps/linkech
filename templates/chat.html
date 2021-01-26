@@ -7,8 +7,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
 <script>
-    const nsp = io.of('/chat');
-    nsp.emit('connect', 'message');
+    const socket = io('/chat');
+    socket.emit('connect', 'message');
 
 </script>
 
