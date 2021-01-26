@@ -14,7 +14,7 @@ def create_socketio_app():
     
     socket = SocketIO(app)
     
-    @socket.on('connect', namespace='/char')
+    @socket.on('connect', namespace='/chat')
     def connect():
         print('connected!')
 
