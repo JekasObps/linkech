@@ -5,35 +5,45 @@
 
 <!-- jquery for Arthur -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
-<script>
-    const socket = io('/chat');
-    socket.emit('connect', 'message');
-
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+<script src="{{ url_for('static', filename='scripts/chat.js') }}"></script>
 
 </head>
 <body>
 
-<header> LINKECH </header>
+<header> <h1>LINKECH</h1> </header>
 
 
+<div class="row">  
+    <div class="col">
+        <div id="settings" class="container">
+            <h2>Settings</h2>
 
-<div class="container" id="chat">
-    <div class="element"> Important message </div>
-    <div class="element your_msg"> Next message </div>
-    
-</div>
+            <lable for="username">Your Name: </lable>
+            <input id="username">
+            <lable for="username">Room: </lable>
+            <input id="room">
 
-<aside class="container" id="users">
-    
-</aside>
+            <button class="button"> enter </button>
+        </div>
 
-<nav class="switch" id="dash">
-    <button id="chat_btn"> chat </button>
-    <button id="room_btn"> room </button>
-    <button id="users_btn"> users </button>
-</nav>
+        <aside class="container" id="users">
+            <h1>Users</h1>
+            <div class="element"> Jekas </div>
+            <div class="element"> Arthur </div>
+            <div class="element"> Alex </div>
+            <div class="element"> Vika </div>
+        </aside>
+    </div> <!-- col -->
+
+    <div class="col">
+        <div class="container" id="chat">
+            <div class="element"> Important message </div>
+            <div class="element your_msg"> Next message </div>        
+        </div>
+        <div class="container"></div>
+    </div>
+</div> <!-- row -->
 
 </body>
 </html>

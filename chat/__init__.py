@@ -8,7 +8,7 @@ def create_socketio_app():
     app = Flask('__name__')
     app.config.from_pyfile('chat.cfg')
 
-    @app.route('/chat')
+    @app.route('/')
     def chat():
         return render_template('chat.html')
     

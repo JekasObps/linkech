@@ -10,26 +10,41 @@
 }
 
 header {
-    position: absolute;
-    top: 10px;
-    left: 42vw;
-
+    margin: auto;
+    width: 25%;
+    text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--base-color);
 }
 
 .container {
-    margin: 20px;
-    background-color: var(--outer);
-    border-radius: 10px;
-    width: auto;
-    min-width: 300px;
-    height: 100vh;
-
+    margin: 10px;
     padding: 10px;
+
+    background-color: var(--outer);
+    border-radius: 2px;
+
+    min-width: 300px;
+    min-height: 100px;
+    
+    overflow-y: scroll;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.container::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #666666;
+    border-radius: 2px;
 }
 
 div.element {
@@ -50,7 +65,34 @@ div.element {
     padding: 5px;
 }
 
-.switch {
+
+.user-entry
+{
+
+}
+
+.status-indicator
+{
+
+}
+
+.on
+{
+
+}
+
+.off
+{
+
+}
+
+.msg-entry
+{
+    
+}
+
+
+/* .switch {
     position: fixed;
     bottom: 0px;
     background-color: var(--base-color);
@@ -60,25 +102,34 @@ div.element {
 
     display: flex;
     place-content: space-around;
-}
+} */
 
-.switch button {
+/* .switch button {
     border-radius: 10px;
     width: 30vw;
     height: 50px;
 
     background-color: var(--outer);
     margin: auto;
+} */
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-div#chat {
-    
+.col {
+    display: flex;
+    flex-direction: column;
 
+    height: 100vh;
 }
 
-aside#users {
-    width: 30vw;
-    height: 400px;
+aside#users, aside#rooms {
+    height: 100vh;
 }
 
 .your_msg {
